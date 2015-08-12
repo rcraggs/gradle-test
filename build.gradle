@@ -1,6 +1,8 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
 
 mainClassName = "rc.app.HelloWorld"
 

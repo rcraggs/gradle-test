@@ -1,17 +1,2 @@
 language: java
 services: sqlite3
-
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "gb0UddYmTxKW1ohs+/c+v+gDQfecYKALR9r3mYWg/7Nmx3KbkWnvgaoCRjsayOdnC1vzV31tSJCy0+uV6lrlkUlXzvbzgLW/8I3WdoSoIkIoUrApzrauIRzaejT5LhUgg3mFLIe6Cq/+qHNkqroz7cNMq2a+GPBCFr0KUGSEE/kkTpfJKsdM6i8I7q+/AwdjcAB2pcWq5VJ55CB1TRyu3QYsGPX57ci+QUloDkYBD3fbnm/OKtTO1bJvl/EMGbtDzgKHL+iSLt9RE7PAq/aPAbWnM7S1hSN2LRWWNnxaE/tgpge+OiEBDOcrpRVLhEqu0eaf4GQmER2gwXVNWYaTfP865LzgTndFzu8HItxAqzpU9O4jaxFPYDLXS+S5Ipu5dLdbLpSqNngAC0iAN0RSXesQjklsqtLBvmf57jJHtMTz4b8HAzYQpM2RuwPWLN8B5q+bxf7Bigw6F3+YQsfpES6Kft0KnKl4GixuFq9a1vlKUdJCLMmi7YqCPp9n0+AoF75cFHJAinUAqyJ3YO65VxzfHa7HSIFjin/2taIq2uVxXWR9ocLBqtfANh9m+1Yz+sxQtFA9RMkal1jNNbocusUaJ9RV46qnot0TSUIPWWqHTGn2ai1OnPIUBL6ehsaVj8TgJMOVrRnDUQiN8EsGxSKFos8SZQupakNdGc9KB50="
-
-addons:
-  coverity_scan:
-    project:
-      name: "rcraggs/gradle-test"
-    notification_email: rcraggs@gmail.com
-    build_command_prepend: ""
-    build_command:   "build"
-    branch_pattern: master
