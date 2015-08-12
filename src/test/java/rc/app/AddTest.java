@@ -12,6 +12,7 @@ public class AddTest {
 
     // assert statements
     assertEquals(10, tester.add(10, 0));
+    assertEquals(1, tester.add(1, 0));
   }
 
 }
