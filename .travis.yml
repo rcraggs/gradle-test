@@ -1,2 +1,4 @@
 language: java
 services: sqlite3
+
+script: gradle check -i
