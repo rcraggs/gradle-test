@@ -20,12 +20,4 @@ task createDatabase(type:Exec) {
   workingDir './'
   commandLine 'mysql', '-uroot'
   standardInput file('src/db/create-database.sql').newInputStream()
-  
-  // //store the output instead of printing to the console:
-  // standardOutput = new ByteArrayOutputStream()
-
-  // //extension method stopTomcat.output() can be used to obtain the output:
-  // ext.output = {
-  //   return standardOutput.toString()
-  // }
 }
