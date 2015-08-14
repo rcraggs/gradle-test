@@ -3,6 +3,12 @@ drop database if exists feedback;
 create database feedback;
 use feedback;
 
+CREATE USER sqluser IDENTIFIED BY 'sqluserpw'; 
+
+grant usage on *.* to sqluser@localhost identified by 'sqluserpw'; 
+grant all privileges on feedback.* to sqluser@localhost; 
+
+    
 CREATE TABLE comments (id INT NOT NULL AUTO_INCREMENT, 
     MYUSER VARCHAR(30) NOT NULL,
     EMAIL VARCHAR(30), 
