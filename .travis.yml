@@ -1,4 +1,8 @@
 language: java
-services: sqlite3
+services: mysql
 
 script: gradle check -i
+
+# .travis.yml
+before_script:
+  - mysql -u root < src/db/create-database.sql
