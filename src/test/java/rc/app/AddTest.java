@@ -15,5 +15,4 @@ public class AddTest {
     assertEquals(1, tester.add(1, 0));
     assertEquals(3, tester.add(2, 1));
   }
-
 }

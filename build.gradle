@@ -2,7 +2,6 @@
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'checkstyle'
-apply plugin: 'findbugs'
 
 mainClassName = "rc.app.HelloWorld"
 
@@ -12,4 +11,5 @@ repositories {
 
 dependencies {
     testCompile "junit:junit:4.11"
+    runtime 'mysql:mysql-connector-java:5.1.36'
 }
