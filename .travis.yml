@@ -1,8 +1,12 @@
 language: java
 services: mysql
-
 script: gradle check -i
-
-# .travis.yml
 before_script:
-  - mysql -u root < src/db/create-database.sql
+- mysql -u root < src/db/create-database.sql
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZILWuuc8Z68XNKZ+NePGl/SYNF3Gkh0lciPjZAY5Qsu/lTHTv2+Uyn/ewVOqhfF2xBKxL25bvLDkD4DtDHaMYCjvGC/Pyv+xQG3XOdeOG3YdPR98A/6yVrhsmEEfFRP9/7SWo+H/BCWPFI7zyvHg6msudbQcp6QmHCAz/GDV0SKRVb2KUV9PyctJ/z4oNYzb/xIqLrckfV87aGi7QkGi6x/QeNu6KfDn2CI8uKVTyrYYXj+yU85AxvaYDzBPVpWERPAqhD5lN5ePdqOmnK9oQjhqyPDmTe8FUpW6MWP2dknAQhTuCS6/ZGgrDg+VOBcylzJSTuLmQ56flr7hQ5ruT1mpY/Yl/ofRCttEI9RjrL1FHPAor7ZUZC2HSKk6y2AqfWYntqDFmyp4blKIFHNMgkwyCzkn5T3jC0GntGiEr9y4npFpSCzzJrRuMy3QLwwIn1rHm+tWzOt2Ifk6H9u1aJD3JrMi7pJPo0Kq5ILCp8r0rLqNumpFhuHyx3qiw3osJekLRrf/pgTJzLNHdjrSqUHWyJzFARN0mK2BlWb0HWLlLHq/Jib8v7QnGr17Sh0ctXmmmanQY0xLvQCGZ7CmSCpum1zdBX91h4Vex9Mg81W10oZFhSIFb5kXTcgT12qLdW8pBiNwlEO/kX//wsQSwVOh8653AWEwCjglrvfIH74=
+  app: gradle-test
+  on:
+    repo: rcraggs/gradle-test

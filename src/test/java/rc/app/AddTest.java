@@ -18,9 +18,7 @@ public class AddTest {
 
   @Test
   public void testInitialDbCount() {
-
     HelloWorld tester = new HelloWorld();
-
     assertEquals(1, tester.getNumberOfFeedbackComments());
   }
 
