@@ -16,6 +16,8 @@ public class AddTest {
     assertEquals(3, tester.add(2, 1));
   }
 
+  // THis is a test comment
+  
   @Test
   public void testInitialDbCount() {
     HelloWorld tester = new HelloWorld();
