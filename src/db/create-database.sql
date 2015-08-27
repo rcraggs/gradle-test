@@ -3,6 +3,7 @@ drop database if exists feedback;
 create database feedback;
 use feedback;
 
+DROP USER sqluser;
 CREATE USER sqluser IDENTIFIED BY 'sqluserpw'; 
 
 grant usage on *.* to sqluser@localhost identified by 'sqluserpw'; 
