@@ -2,11 +2,8 @@ package rc.app;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-//import java.sql.SQLException;
 import java.sql.Statement;
-//import java.util.Date;
 
 /**
 * This is a class.
@@ -26,7 +23,9 @@ public class HelloWorld {
     * @return the sum
     */
     public final int add(final int a, final int b)  {
-        return a + b;
+
+    	int MYINT = a - b;
+    	return MYINT;
     }
 
     public final int getNumberOfFeedbackComments(){
@@ -37,7 +36,6 @@ public class HelloWorld {
 
         Connection connect = null;
         Statement statement = null;
-        PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         // This will load the MySQL driver, each DB has its own driver
