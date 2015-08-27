@@ -2,4 +2,4 @@ language: java
 services: mysql
 script: gradle check -i
 before_script:
-- mysql -u root < src/db/create-database.sql
+- mysql -u root < src/db/create-database.sql 
